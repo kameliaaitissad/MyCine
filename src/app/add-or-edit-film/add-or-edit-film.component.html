@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+       <title>Ma première page HTML</title>
+       <meta http-equiv="content-type" content="text/html;charset=utf-8">
+       
+    </head>
+    <body class="text-center">
+        
+        
+        <main class="form-signin w-100 m-auto">
+        <form [formGroup]="FilmForm" (ngSubmit)="submitFilm()">
+            <img class="mb-4" src="../../assets/please_add_a_film.png" alt="test" >
+            <h1 class="h3 mb-3 fw-normal">Please add a film</h1>
+        
+            <div class="form-floating">
+              <input type="text" class="form-control" formControlName="Titre_film" id="floatingtitle" placeholder="Title">
+              <label for="floatingtitle">Title</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" formControlName="Synopsis_film" id="floatingsynopsis" placeholder="Synopsis"></textarea>
+              <label for="floatingsynopsis">Synopsis</label>
+            </div>
+           
+             
+            
+            <div class="input-group w-50" style="    margin-left: 25%; margin-top: 10px;">
+              <span class="input-group-text" id="basic-addon1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              </span>
+              <input type="number" min="0" max="10" class="form-control" formControlName="note_film" placeholder="0" aria-label="Rating" aria-describedby="basic-addon1">
+            </div>
+          
+            <div class="checkbox mb-3">
+              </div>
+
+            <button class="w-100 btn btn-lg btn-primary" id="btn_submit" type="submit">Add</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+          </form>
+        </main>
+        
+        
+            
+          </body>
+<!-- <div class="container">
+    <div class="row">
+         
+         <div class="col">
+            <form [formGroup]="FilmForm" (ngSubmit)="submitFilm()">          
+                <div class="mb-3">
+                    <label for="Titre_film" class="form-label"> Titre du film </label>
+                    <input type="text" formControlName="TitreControl" class="form-control" #newFilm id="Titre_film">
+                </div>
+            
+                <div class="mb-3">
+                    <label for="Synopsis_film" class="form-label" >Synopsis du Film</label>
+                    <input type="text" formControlName="SynopsisControl" class="form-control" id="Synopsis_film">
+                </div>
+            
+                <div class="mb-3">
+                    <label for="note_film" class="form-label"> Note du film </label>
+                    <input type="number" formControlName="noteControl" class="form-control"  min="0" max="10" id="note_film" >
+                </div>
+            
+                <button type="submit" id="btn_submit">Ajouter</button>      
+                
+            </form>
+        </div>
+         <div class="col"></div>
+         <div class="col"></div>
+    </div>
+
+    
+</div>
+</body> -->
+</html>
